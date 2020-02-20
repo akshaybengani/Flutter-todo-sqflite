@@ -43,8 +43,8 @@ class DatabaseHelper {
 
   Future<List<Map<String, dynamic>>> getNoteMapList() async {
     Database db = await this.database;
-    // var result = await db.rawQuery('SELECT * FROM $todoTable');
-    var result = await db.query(todoTable);
+    var result = await db.rawQuery('SELECT * FROM $todoTable');
+    //var result = await db.query(todoTable);
     return result;
   }
 
